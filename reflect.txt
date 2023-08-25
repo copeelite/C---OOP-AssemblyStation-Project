@@ -1,0 +1,42 @@
+Project Assembly Line Management
+During the development of the Assembly Line Management project,
+I encountered several interesting challenges and implemented various concepts to create an efficient and functional assembly line system.
+The project aimed to simulate an assembly line where customer orders pass through multiple workstations for processing until they are completed.
+One of the key aspects of the project was the implementation of different classes to represent the various components of the assembly line.
+The "Station" class was responsible for defining individual workstations, with properties such as station ID, item name, item quantity,
+and a pointer to the next workstation in the assembly line. The use of pointers in objects allowed for creating a linked structure,
+ensuring smooth movement of orders through the line.
+The "Utilities" class played a crucial role in tokenizing and extracting information from strings read from input files.
+It provided functions to set the field width for proper formatting during display.
+Utilizing pointers to objects and dynamic memory allocation helped manage resources efficiently.
+Another significant class was the "CustomerOrder" class,
+which represented a customer order with multiple items.
+Each order was processed through the assembly line, with workstations attempting to fill the required items.
+If an item was unavailable, the order moved to the next station.
+The "Workstation" class, derived from the "Station" class,
+managed the queue of orders and determined whether an order could move to the next station based on its status.
+One of the main challenges I faced during the project was managing the movement of orders through the assembly line correctly.
+I had to ensure that orders were processed in the correct order and that workstations were appropriately linked.
+This involved careful handling of pointers and dynamic memory allocation to avoid memory leaks and access violations. I also
+reviewed the static and extern usage for linker at ms3.
+To load the assembly line from a file,
+I implemented the "LineManager" class.
+This class parsed the input file, created the necessary workstations,
+and linked them based on their dependencies.
+The use of pointers to objects facilitated the smooth linkage between workstations, enabling efficient order processing.
+Throughout the project,
+I learned the importance of tracing the object life cycle and the significance of pointers in creating dynamic data structures.
+I also gained valuable experience in implementing classes, inheritance, and utilizing the Standard Template Library (STL) containers
+like "std::deque" to manage collections of objects. I also try to create the forward-linked lists and doubly liked list by myself like following:
+class Element{
+    Element* next{};
+    void insert_after(Element* new_element){
+        new_element->next = next;
+        next = new_element;
+    }
+}
+
+In conclusion, the Assembly Line Management project was a great learning experience,
+allowing me to deepen my understanding of C++ programming, object-oriented concepts,
+and dynamic memory allocation.
+The use of pointers in objects and managing resources efficiently were essential skills I developed during this project.

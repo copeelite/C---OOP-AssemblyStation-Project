@@ -1,0 +1,169 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: Milestone1
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/fanghaomeng/Desktop/OOP/Milestone3/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target Milestone1
+
+
+#############################################
+# Order-only phony target for Milestone1
+
+build cmake_object_order_depends_target_Milestone1: phony || CMakeFiles/Milestone1.dir
+
+build CMakeFiles/Milestone1.dir/ms3.cpp.o: CXX_COMPILER__Milestone1_Debug /Users/fanghaomeng/Desktop/OOP/Milestone3/ms3.cpp || cmake_object_order_depends_target_Milestone1
+  DEP_FILE = CMakeFiles/Milestone1.dir/ms3.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -std=gnu++17
+  OBJECT_DIR = CMakeFiles/Milestone1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Milestone1.dir
+
+build CMakeFiles/Milestone1.dir/Station.cpp.o: CXX_COMPILER__Milestone1_Debug /Users/fanghaomeng/Desktop/OOP/Milestone3/Station.cpp || cmake_object_order_depends_target_Milestone1
+  DEP_FILE = CMakeFiles/Milestone1.dir/Station.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -std=gnu++17
+  OBJECT_DIR = CMakeFiles/Milestone1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Milestone1.dir
+
+build CMakeFiles/Milestone1.dir/Utilities.cpp.o: CXX_COMPILER__Milestone1_Debug /Users/fanghaomeng/Desktop/OOP/Milestone3/Utilities.cpp || cmake_object_order_depends_target_Milestone1
+  DEP_FILE = CMakeFiles/Milestone1.dir/Utilities.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -std=gnu++17
+  OBJECT_DIR = CMakeFiles/Milestone1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Milestone1.dir
+
+build CMakeFiles/Milestone1.dir/CustomerOrder.cpp.o: CXX_COMPILER__Milestone1_Debug /Users/fanghaomeng/Desktop/OOP/Milestone3/CustomerOrder.cpp || cmake_object_order_depends_target_Milestone1
+  DEP_FILE = CMakeFiles/Milestone1.dir/CustomerOrder.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -std=gnu++17
+  OBJECT_DIR = CMakeFiles/Milestone1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Milestone1.dir
+
+build CMakeFiles/Milestone1.dir/Workstation.cpp.o: CXX_COMPILER__Milestone1_Debug /Users/fanghaomeng/Desktop/OOP/Milestone3/Workstation.cpp || cmake_object_order_depends_target_Milestone1
+  DEP_FILE = CMakeFiles/Milestone1.dir/Workstation.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -std=gnu++17
+  OBJECT_DIR = CMakeFiles/Milestone1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Milestone1.dir
+
+build CMakeFiles/Milestone1.dir/LineManager.cpp.o: CXX_COMPILER__Milestone1_Debug /Users/fanghaomeng/Desktop/OOP/Milestone3/LineManager.cpp || cmake_object_order_depends_target_Milestone1
+  DEP_FILE = CMakeFiles/Milestone1.dir/LineManager.cpp.o.d
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0 -std=gnu++17
+  OBJECT_DIR = CMakeFiles/Milestone1.dir
+  OBJECT_FILE_DIR = CMakeFiles/Milestone1.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Milestone1
+
+
+#############################################
+# Link the executable Milestone1
+
+build Milestone1: CXX_EXECUTABLE_LINKER__Milestone1_Debug CMakeFiles/Milestone1.dir/ms3.cpp.o CMakeFiles/Milestone1.dir/Station.cpp.o CMakeFiles/Milestone1.dir/Utilities.cpp.o CMakeFiles/Milestone1.dir/CustomerOrder.cpp.o CMakeFiles/Milestone1.dir/Workstation.cpp.o CMakeFiles/Milestone1.dir/LineManager.cpp.o
+  FLAGS = -g -arch arm64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX13.3.sdk -mmacosx-version-min=13.0
+  OBJECT_DIR = CMakeFiles/Milestone1.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = Milestone1
+  TARGET_PDB = Milestone1.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/fanghaomeng/Desktop/OOP/Milestone3/cmake-build-debug && /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/fanghaomeng/Desktop/OOP/Milestone3/cmake-build-debug && /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/fanghaomeng/Desktop/OOP/Milestone3 -B/Users/fanghaomeng/Desktop/OOP/Milestone3/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/fanghaomeng/Desktop/OOP/Milestone3/cmake-build-debug
+
+build all: phony Milestone1
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Users/fanghaomeng/Desktop/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
